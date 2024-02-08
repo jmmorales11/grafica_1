@@ -1,0 +1,332 @@
+[
+  {
+    "id": "pregunta1",
+    "pregunta": "Para graficar un triángulo cualquiera los valores de los vértices son:",
+    "opciones": {
+      "opcion1_1": "A(0,0); B(a, 0); C(b*cos(A), b*sen(A))",
+      "opcion1_2": "A(0,0); B(b, 0); C(b*cos(A), b*sen(A))",
+      "opcion1_3": "A(0,0); B(c, 0); C(b*sen(A), b*cos(A))",
+      "opcion1_4": "A(0,0); B(c, 0); C(b*cos(A), b*sen(A))"
+    },
+    "respuestaCorrecta": "opcion1_4"
+  },
+  {
+    "id": "pregunta2",
+    "pregunta": "Verdadero o falso: a) La recta de Euler de un triángulo es una recta en la que están situados el ortocentro, el circuncentro y el baricentro de un triángulo; incluye al punto de Exeter y al centro de la circunferencia de los nueve puntos notables de un triángulo escaleno; b) la recta de Euler pasa por el centro de intersección de las alturas que es el ortocentro, pasa por el centro de intersección de las medianas que es el circuncentro y el centro de intersección de las mediatrices que es el baricentro.",
+    "opciones": {
+      "opcion2_1": "Verdadero, Verdadero",
+      "opcion2_2": "Verdadero, Falso",
+      "opcion2_3": "Falso, Verdadero",
+      "opcion2_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion2_2"
+  },
+  {
+    "id": "pregunta3",
+    "pregunta": "El valor del vértice del baricentro de un triángulo cualquiera está dado por la fórmula:",
+    "opciones": {
+      "opcion3_1": "G((x1+x2+x3)/2, (y1+y2+y3)/2)",
+      "opcion3_2": "G((x1+x2+x3)/3, (y1+y2+y3)/3)",
+      "opcion3_3": "G((x1+x2+x3)/4, (y1+y2+y3)/4)",
+      "opcion3_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion3_2"
+  },
+  {
+    "id": "pregunta4",
+    "pregunta": "El valor del vértice del circuncentro de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:",
+    "opciones": {
+      "opcion4_1": "P(c/2, (b*b*sen(A)*cos(A)+b*b*cos(A)*sen(A)-2*b*sen(A)*(c/2))/(2*b*cos(A)))",
+      "opcion4_2": "P(c/2, (b*b*sen(A)*cos(A)+b*b*cos(A)*sen(A)-2*b*cos(A)*(c/2))/(2*b*cos(A)))",
+      "opcion4_3": "P(c/2, (b*b*sen(A)*sen(A)+b*b*cos(A)*cos(A)-2*b*cos(A)*(c/2))/(2*b*sen(A)))",
+      "opcion4_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion4_3"
+  },
+  {
+    "id": "pregunta5",
+    "pregunta": "El valor del vértice del ortocentro de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:",
+    "opciones": {
+      "opcion5_1": "H(b*cos(A), c*ctg(A)-b*cos(A)*tan(A))",
+      "opcion5_2": "H(b*cos(A), c*ctg(A)-b*cos(A)*ctg(A))",
+      "opcion5_3": "H(b*cos(A), c*tan(A)-b*cos(A)*ctg(A))",
+      "opcion5_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion5_2"
+  },
+  {
+    "id": "pregunta6",
+    "pregunta": "El valor del vértice del incentro de un triángulo cualquiera está dado por la fórmula:",
+    "opciones": {
+      "opcion6_1": "((a*xA+b*xB+c*xC)/(3*a+3*b+3*c), (a*yA+b*yB+c*yC)/(3*a+3*b+3*c))",
+      "opcion6_2": "((a*xA+b*xB+c*xC)/(2*a+2*b+2*c), (a*yA+b*yB+c*yC)/(2*a+2*b+2*c))",
+      "opcion6_3": "((a*xA+b*xB+c*xC)/(a+b+c), (a*yA+b*yB+c*yC)/(a+b+c))",
+      "opcion6_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion6_3"
+  },
+  {
+    "id": "pregunta7",
+    "pregunta": "Los valores de los tres vértices de los círculos exinscritos a un triángulo cualquiera formados por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:",
+    "opciones": {
+      "opcion7_1": "D(c-(Ra/tan(betha)), Ra); E(Rb/tan(alpha), Rb); F(Rc/tan(alpha), Rc)",
+      "opcion7_2": "D(c-(Ra/tan(betha)), Ra); E(-Rb/tan(alpha), Rb); F(Rc/tan(alpha), -Rc)",
+      "opcion7_3": "D(c+(Ra/tan(betha)), Ra); E(-Rb/tan(alpha), Rb); F(Rc/tan(alpha), -Rc)",
+      "opcion7_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion7_3"
+  },
+  {
+    "id": "pregunta8",
+    "pregunta": "El valor del radio Ra de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:",
+    "opciones": {
+      "opcion8_1": "Ra=raíz_cuad((s*(s-b)*(s-c))/(s-a))",
+      "opcion8_2": "Ra=raíz_cuad((s*(s-a)*(s-c))/(s-b))",
+      "opcion8_3": "Ra=raíz_cuad((s*(s-b)*(s-a))/(s-c))",
+      "opcion8_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion8_1"
+  },
+  {
+    "id": "pregunta9",
+    "pregunta": "El valor del radio Rb de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:",
+    "opciones": {
+      "opcion9_1": "Rb=raíz_cuad((s*(s-b)*(s-c))/(s-a))",
+      "opcion9_2": "Rb=raíz_cuad((s*(s-a)*(s-c))/(s-b))",
+      "opcion9_3": "Rb=raíz_cuad((s*(s-b)*(s-a))/(s-c))",
+      "opcion9_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion9_2"
+  },
+  {
+    "id": "pregunta10",
+    "pregunta": "El valor del radio Rc de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:",
+    "opciones": {
+      "opcion10_1": "Rc=raíz_cuad((s*(s-b)*(s-c))/(s-a))",
+      "opcion10_2": "Rc=raíz_cuad((s*(s-a)*(s-c))/(s-b))",
+      "opcion10_3": "Rc=raíz_cuad((s*(s-b)*(s-a))/(s-c))",
+      "opcion10_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion10_3"
+  },
+  {
+    "id": "pregunta11",
+    "pregunta": "Verdadero o falso: a) Dado un triángulo cualquiera (excluyendo un triángulo rectángulo), el triángulo órtico o triángulo pedal respecto del dado, es el que tiene por vértices los pies de las tres alturas de este, es decir, las proyecciones de los vértices sobre los lados; b) El ortocentro de un triángulo es el incentro de su triángulo órtico y las alturas de un triángulo son las bisectrices de los ángulos del triángulo pedal.",
+    "opciones": {
+      "opcion11_1": "Verdadero, Verdadero",
+      "opcion11_2": "Verdadero, Falso",
+      "opcion11_3": "Falso, Verdadero",
+      "opcion11_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion11_1"
+  },
+  {
+    "id": "pregunta12",
+    "pregunta": "El valor del vértice de la mediana opuesta al vértice A de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:",
+    "opciones": {
+      "opcion12_1": "M(c + b * cos(A), b * sin(A))",
+      "opcion12_2": "M((c + b * cos(A)) / 2.0, b * sin(A) / 2.0)",
+      "opcion12_3": "M((c + b * cos(A)) / 3.0, b * sin(A) / 3.0)",
+      "opcion12_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion12_2"
+  },
+  {
+    "id": "pregunta13",
+    "pregunta": "El valor del vértice de la mediana opuesta al vértice B de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:",
+    "opciones": {
+      "opcion13_1": "M((b * cos(A)) / 3.0), (b * sin(A)) / 3.0)",
+      "opcion13_2": "M(b * cos(A), b * sin(A))",
+      "opcion13_3": "M((b * cos(A)) / 2.0), (b * sin(A)) / 2.0)",
+      "opcion13_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion13_3"
+  },
+  {
+    "id": "pregunta14",
+    "pregunta": "El valor del vértice de la mediana opuesta al vértice C de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:",
+    "opciones": {
+      "opcion14_1": "M(c / 2.0, 0.0)",
+      "opcion14_2": "M(c / 2.0 + b / 2.0, 0.0)",
+      "opcion14_3": "M(b / 2.0, 0.0)",
+      "opcion14_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion14_1"
+  },
+  {
+    "id": "pregunta15",
+    "pregunta": "En la función VectorToPointF(), de la clase Vector2D se convierte coordenadas del mundo real al mundo de la Computación Gráfica utilizando las siguientes fórmulas, considerando un área de trabajo de 800x600:",
+    "opciones": {
+      "opcion15_1": "xp = x*SF-400; yp = (-1)*(-y)*SF + 300",
+      "opcion15_2": "xp = x*SF+400; yp = (-1)*y*SF + 300",
+      "opcion15_3": "xp = x*SF-200; yp = (-1)*(-y)*SF + 150",
+      "opcion15_4": "xp = x*SF+200; yp = (-1)*y*SF + 150"
+    },
+    "respuestaCorrecta": "opcion15_2"
+  },
+  {
+    "id": "pregunta16",
+    "pregunta": "En la función VectorToPointF(), de la clase Vector2D se convierte coordenadas del mundo real al mundo de la Computación Gráfica utilizando las siguientes fórmulas, considerando un área de trabajo de (xCenter*2)x(yCenter*2) y utilizando coordenadas relativas:",
+    "opciones": {
+      "opcion16_1": "xp = x*SF+xCenter; yp = (-1)*y*SF+yCenter",
+      "opcion16_2": "xp = x*SF+2*xCenter; yp = (-1)*(y)*SF+2*yCenter",
+      "opcion16_3": "xp = x*SF+xCenter/2; yp = (-1)*(y)*SF+yCenter/2",
+      "opcion16_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion16_1"
+  },
+  {
+    "id": "pregunta17",
+    "pregunta": "En la función PlotAxis(), de la clase Vector3D, para graficar los ejes coordenados 'x' y 'z', se deben calcular los valores de los segmentos 'a' y 'b' cuyas fórmulas son:",
+    "opciones": {
+      "opcion17_1": "a = b / tan(30); b = 8.0",
+      "opcion17_2": "a = 8.0; b = b / tan(30)",
+      "opcion17_3": "a = b / tan(60); b = 4.0",
+      "opcion17_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion17_1"
+  },
+  {
+    "id": "pregunta18",
+    "pregunta": "En la función PlotPlane(), de la clase Vector3D, para graficar el plano ABCD, se deben calcular los valores de los segmentos 'a' y 'b' cuyas fórmulas son:",
+    "opciones": {
+      "opcion18_1": "a = b / tan(60); b = 8.0",
+      "opcion18_2": "a = 4.0; b = b / tan(30)",
+      "opcion18_3": "a = b / tan(30); b = 4.0",
+      "opcion18_4": "Ninguna de las anteriores."
+    },
+    "respuestaCorrecta": "opcion18_3"
+  },
+  {
+    "id": "pregunta19",
+    "pregunta": "En la función PlotPlane(), de la clase Vector3D, para graficar el plano ABCD, los cuatro vértices en coordenadas relativas tienen los siguientes valores, en función de los segmentos 'a' y 'b':",
+    "opciones": {
+      "opcion19_1": "P1(-200, ((-1) * b * SF) + 150; P2(a * SF + 200, 150); P3(200, ((-1) * -b * SF) + 150); P4(a * SF + 200; 150)",
+      "opcion19_2": "P1(200, ((-1) * b * SF) + 150; P2(a * SF + 200, 150); P3(200, ((-1) * -b * SF) + 150); P4(-a * SF + 200; 150)",
+      "opcion19_3": "P1(-xCenter, ((-1) * b * SF) + yCenter; P2(a * SF + xCenter, yCenter); P3(xCenter, ((-1) * -b * SF) + yCenter); P4(a * SF + xCenter; yCenter)",
+      "opcion19_4": "P1(xCenter, ((-1) * b * SF) + yCenter; P2(a * SF + xCenter, yCenter); P3(xCenter, ((-1) * -b * SF) + yCenter); P4(-a * SF + xCenter; yCenter)"
+    },
+    "respuestaCorrecta": "opcion19_4"
+  },
+  {
+    "id": "pregunta20",
+    "pregunta": "En la función PlotPlane(), de la clase Vector3D, para graficar los rombos pequeños, se deben calcular los valores de los segmentos 'p' y 'q' cuyas fórmulas son:",
+    "opciones": {
+      "opcion20_1": "p = q / tan(60); q = 0.25",
+      "opcion20_2": "p = 0.25; q = p / tan(60)",
+      "opcion20_3": "p = q / tan(30); q = 0.25",
+      "opcion20_4": "p = 0.25; q = p / tan(30)"
+    },
+    "respuestaCorrecta": "opcion20_4"
+  },
+  {
+    "id": "pregunta21",
+    "pregunta": "Verdadero o falso: a) En la función PlotPlane(), de la clase Vector3D, para graficar las líneas auxiliares paralelas al eje 'z' del plano ABCD se deben unir los puntos del triángulo rectángulo superior derecho con los puntos opuestos del triángulo rectángulo inferior izquierdo que forman parte del plano; b) En la función PlotPlane(), de la clase Vector3D, para graficar las líneas auxiliares paralelas al eje 'x' del plano ABCD se deben unir los puntos del triángulo rectángulo superior izquierdo con los puntos del triángulo rectángulo inferior derecho que forman parte del plano.",
+    "opciones": {
+      "opcion21_1": "Verdadero, Verdadero",
+      "opcion21_2": "Falso, Verdadero",
+      "opcion21_3": "Verdadero, Falso",
+      "opcion21_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion21_3"
+  },
+  {
+    "id": "pregunta22",
+    "pregunta": "En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular algunos vértices como el valor del vértice A y del vértice B cuyas coordenadas son:",
+    "opciones": {
+      "opcion22_1": "A(a*cos(60), b+a*sin(60)); B(a*cos(60), a*sin(60))",
+      "opcion22_2": "A(a*cos(60), b-a*sin(60)); B(a*cos(60), -a*sin(60))",
+      "opcion22_3": "A(a*cos(30), b+a*sin(30)); B(a*cos(30), a*sin(30))",
+      "opcion22_4": "A(a*cos(30), b-a*sin(30)); B(a*cos(30), -a*sin(30))"
+    },
+    "respuestaCorrecta": "opcion22_4"
+  },
+  {
+    "id": "pregunta23",
+    "pregunta": "Verdadero o falso: a) En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular seis vértices y los valores de los segmentos: BM, OM, DP, AP, PM, NM, ON; b) En la función PlotBox(), de la clase Vector3D, para graficar el vector se debe calcular el valor de los vértices O y D, y luego dibujar una línea entre esos dos puntos.",
+    "opciones": {
+      "opcion23_1": "Verdadero, Verdadero",
+      "opcion23_2": "Falso, Verdadero",
+      "opcion23_3": "Verdadero, Falso",
+      "opcion23_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion23_2"
+  },
+  {
+    "id": "pregunta24",
+    "pregunta": "En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular algunos vértices como el valor del vértice C y del vértice D cuyas coordenadas son:",
+    "opciones": {
+      "opcion24_1": "C(ON, PM+b); D(ON, PM)",
+      "opcion24_2": "C(ON, PM-b); D(ON, -PM)",
+      "opcion24_3": "C(ON, PM+b); D(ON, -PM)",
+      "opcion24_4": "C(ON, PM-b); D(ON, PM)"
+    },
+    "respuestaCorrecta": "opcion24_4"
+  },
+  {
+    "id": "pregunta25",
+    "pregunta": "Verdadero o falso: a) En la función PlotParallelogram(), de la clase Vector3D, para graficar el vector paralelo al vector A se requiere dibujar una línea operando con los vectores A y C, mientras que para graficar el vector paralelo al vector B se requiere dibujar una línea operando con los vectores B y C; b) En la función PlotParallelogram(), de la clase Vector3D, para graficar el paralelogramo resultante de la suma y de la resta se requiere que esta función opere con los tres vectores A, B y C.",
+    "opciones": {
+      "opcion25_1": "Verdadero, Verdadero",
+      "opcion25_2": "Verdadero, Falso",
+      "opcion25_3": "Falso, Verdadero",
+      "opcion25_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion25_3"
+  },
+  {
+    "id": "pregunta26",
+    "pregunta": "Verdadero o falso: a) Para calcular el vector proyección V de A/B se requiere calcular el producto punto entre el vector A y el vector unitario de B cuyo resultado al ser un escalar se deberá multiplicar por el vector unitario de B; b) Para calcular el vector perpendicular P se requiere realizar una resta entre los vectores A y el vector proyección V de A/B.",
+    "opciones": {
+      "opcion26_1": "Verdadero, Verdadero",
+      "opcion26_2": "Verdadero, Falso",
+      "opcion26_3": "Falso, Verdadero",
+      "opcion26_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion26_1"
+  },
+  {
+    "id": "pregunta27",
+    "pregunta": "Verdadero o falso: a) En la función EvaluateFunction(), de la clase CCuadraticFunction, para graficar una parábola dentro del dominio [-20, 20], con un tamaño de paso h=1, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 21; b) En la función EvaluateFunction(), de la clase CSinFunction, para graficar la función seno(x) dentro del dominio [-3PI, 3PI], con un tamaño de paso h=15 grados, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 73.",
+    "opciones": {
+      "opcion27_1": "Verdadero, Verdadero",
+      "opcion27_2": "Verdadero, Falso",
+      "opcion27_3": "Falso, Verdadero",
+      "opcion27_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion27_4"
+  },
+  {
+    "id": "pregunta28",
+    "pregunta": "Verdadero o falso: a) En la función EvaluateFunction(), de la clase CRoseFourPetals, para graficar la función polar dentro del dominio [0, 2PI], con un tamaño de paso h=1 grado, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 361; b) En la función EvaluateFunction(), de la clase CParametricFunction, para graficar una función paramétrica dentro del dominio [0, 2PI], con un tamaño de paso h=1 grado, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 361.",
+    "opciones": {
+      "opcion28_1": "Verdadero, Verdadero",
+      "opcion28_2": "Verdadero, Falso",
+      "opcion28_3": "Falso, Verdadero",
+      "opcion28_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion28_4"
+  },
+  {
+    "id": "pregunta29",
+    "pregunta": "Verdadero o falso: a) En la función EvaluateFunction(), de la clase CRationalFunction, para graficar la función racional y =(x*x-1)/(x*x-4) se requieren definir 3 dominios manejados cada uno con un bucle por la presencia de tres asíntotas; b) En la función PlotAsimptotes(), de la clase CRationalFunction, se tiene que las asíntotas x=2 como x=-2 son paralelas al eje vertical, mientras que la asíntota y=1 es paralela al eje horizontal.",
+    "opciones": {
+      "opcion29_1": "Verdadero, Verdadero",
+      "opcion29_2": "Verdadero, Falso",
+      "opcion29_3": "Falso, Verdadero",
+      "opcion29_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion29_1"
+  },
+  {
+    "id": "pregunta30",
+    "pregunta": "Verdadero o falso: a) En la función PlotAsimptotes(), de la clase CRationalFunction, para graficar las asíntotas se debe operar los vectores A y C; b) En la función EvaluateFunction(), de la clase CLogarithmFunction, para graficar la función logarítmica y = log(x) se requiere calcular el logaritmo natural del valor de x con respecto a la base 10.",
+    "opciones": {
+      "opcion30_1": "Verdadero, Verdadero",
+      "opcion30_2": "Verdadero, Falso",
+      "opcion30_3": "Falso, Verdadero",
+      "opcion30_4": "Falso, Falso"
+    },
+    "respuestaCorrecta": "opcion30_2"
+  }
+]
