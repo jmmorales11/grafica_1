@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario de Preguntas</title>
+<style>
+.correcto {
+  color: green;
+}
+.incorrecto {
+  color: red;
+}
+#quizForm{
+    width: 80%;
+    margin: auto;
+}
+body{
+
+}
+</style>
+</head>
+<body>
+
+<form id="quizForm">
+  <fieldset>
+    <legend>Preguntas sobre Triángulos</legend>
+
+    <div>
+      <label for="pregunta1">1) Para graficar un triángulo cualquiera los valores de los vértices son:</label><br>
+      <input type="radio" id="opcion1_1" name="pregunta1" value="opcion1_1" onclick="checkAnswer('opcion1_1', 'pregunta1', 'respuesta1')">
+      <label for="opcion1_1">A(0,0); B(a, 0); C(b*cos(A), b*sen(A))</label><br>
+      <input type="radio" id="opcion1_2" name="pregunta1" value="opcion1_2" onclick="checkAnswer('opcion1_2', 'pregunta1', 'respuesta1')">
+      <label for="opcion1_2">A(0,0); B(b, 0); C(b*cos(A), b*sen(A))</label><br>
+      <input type="radio" id="opcion1_3" name="pregunta1" value="opcion1_3" onclick="checkAnswer('opcion1_3', 'pregunta1', 'respuesta1')">
+      <label for="opcion1_3">A(0,0); B(c, 0); C(b*sen(A), b*cos(A))</label><br>
+      <input type="radio" id="opcion1_4" name="pregunta1" value="opcion1_4" onclick="checkAnswer('opcion1_4', 'pregunta1', 'respuesta1')">
+      <label for="opcion1_4">A(0,0); B(c, 0); C(b*cos(A), b*sen(A)) </label><br>
+    </div>
+    <div id="respuesta1"></div>
+    
+    <div>
+      <label for="pregunta2">2) Verdadero o falso: a) La recta de Euler de un triángulo es una recta en la que están
+        situados el ortocentro, el circuncentro y el baricentro de un triángulo; incluye al punto
+        de Exeter y al centro de la circunferencia de los nueve puntos notables de un
+        triángulo escaleno; b) la recta de Euler pasa por el centro de intersección de las
+        alturas que es el ortocentro, pasa por el centro de intersección de las medianas que
+        es el circuncentro y el centro de intersección de las mediatrices que es el baricentro.</label><br>
+      <input type="radio" id="opcion2_1" name="pregunta2" value="opcion2_1" onclick="checkAnswer('opcion2_1', 'pregunta2', 'respuesta2')">
+      <label for="opcion2_1">Verdadero, Verdadero</label><br>
+      <input type="radio" id="opcion2_2" name="pregunta2" value="opcion2_2" onclick="checkAnswer('opcion2_2', 'pregunta2', 'respuesta2')">
+      <label for="opcion2_2">Verdadero, Falso </label><br>
+      <input type="radio" id="opcion2_3" name="pregunta2" value="opcion2_3" onclick="checkAnswer('opcion2_3', 'pregunta2', 'respuesta2')">
+      <label for="opcion2_3">Falso, Verdadero</label><br>
+      <input type="radio" id="opcion2_4" name="pregunta2" value="opcion2_4" onclick="checkAnswer('opcion2_4', 'pregunta2', 'respuesta2')">
+      <label for="opcion2_4">Falso, Falso</label><br>
+    </div>
+    <div id="respuesta2"></div>
+
+    <div>
+      <label for="pregunta3">3) El valor del vértice del baricentro de un triángulo cualquiera está dado por la fórmula:</label><br>
+      <input type="radio" id="opcion3_1" name="pregunta3" value="opcion3_1" onclick="checkAnswer('opcion3_1', 'pregunta3', 'respuesta3')">
+      <label for="opcion3_1">G((x1+x2+x3)/2, (y1+y2+y3)/2)</label><br>
+      <input type="radio" id="opcion3_2" name="pregunta3" value="opcion3_2" onclick="checkAnswer('opcion3_2', 'pregunta3', 'respuesta3')">
+      <label for="opcion3_2">G((x1+x2+x3)/3, (y1+y2+y3)/3) </label><br>
+      <input type="radio" id="opcion3_3" name="pregunta3" value="opcion3_3" onclick="checkAnswer('opcion3_3', 'pregunta3', 'respuesta3')">
+      <label for="opcion3_3">G((x1+x2+x3)/4, (y1+y2+y3)/4)</label><br>
+      <input type="radio" id="opcion3_4" name="pregunta3" value="opcion3_4" onclick="checkAnswer('opcion3_4', 'pregunta3', 'respuesta3')">
+      <label for="opcion3_4">Ninguna de las anteriores.</label><br>
+    </div>
+    <div id="respuesta3"></div>
+    <div>
+        <label for="pregunta4">4) El valor del vértice del circuncentro de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion4_1" name="pregunta4" value="opcion4_1" onclick="checkAnswer('opcion4_1', 'pregunta4', 'respuesta4')">
+        <label for="opcion4_1">P(c/2, (b*b*sen(A)*cos(A)+b*b*cos(A)*sen(A)-2*b*sen(A)*(c/2))/(2*b*cos(A)))</label><br>
+        <input type="radio" id="opcion4_2" name="pregunta4" value="opcion4_2" onclick="checkAnswer('opcion4_2', 'pregunta4', 'respuesta4')">
+        <label for="opcion4_2">P(c/2, (b*b*sen(A)*cos(A)+b*b*cos(A)*sen(A)-2*b*cos(A)*(c/2))/(2*b*cos(A)))</label><br>
+        <input type="radio" id="opcion4_3" name="pregunta4" value="opcion4_3" onclick="checkAnswer('opcion4_3', 'pregunta4', 'respuesta4')">
+        <label for="opcion4_3">P(c/2, (b*b*sen(A)*sen(A)+b*b*cos(A)*cos(A)-2*b*cos(A)*(c/2))/(2*b*sen(A))) </label><br>
+        <input type="radio" id="opcion4_4" name="pregunta4" value="opcion4_4" onclick="checkAnswer('opcion4_4', 'pregunta4', 'respuesta4')">
+        <label for="opcion4_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta4"></div>
+      <div>
+        <label for="pregunta5">5) El valor del vértice del ortocentro de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion5_1" name="pregunta5" value="opcion5_1" onclick="checkAnswer('opcion5_1', 'pregunta5', 'respuesta5')">
+        <label for="opcion5_1">H(b*cos(A), c*ctg(A)-b*cos(A)*tan(A))</label><br>
+        <input type="radio" id="opcion5_2" name="pregunta5" value="opcion5_2" onclick="checkAnswer('opcion5_2', 'pregunta5', 'respuesta5')">
+        <label for="opcion5_2">H(b*cos(A), c*ctg(A)-b*cos(A)*ctg(A)) </label><br>
+        <input type="radio" id="opcion5_3" name="pregunta5" value="opcion5_3" onclick="checkAnswer('opcion5_3', 'pregunta5', 'respuesta5')">
+        <label for="opcion5_3">H(b*cos(A), c*tan(A)-b*cos(A)*ctg(A))</label><br>
+        <input type="radio" id="opcion5_4" name="pregunta5" value="opcion5_4" onclick="checkAnswer('opcion5_4', 'pregunta5', 'respuesta5')">
+        <label for="opcion5_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta5"></div>
+      <div>
+        <label for="pregunta6">6) El valor del vértice del incentro de un triángulo cualquiera está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion6_1" name="pregunta6" value="opcion6_1" onclick="checkAnswer('opcion6_1', 'pregunta6', 'respuesta6')">
+        <label for="opcion6_1">((a*xA+b*xB+c*xC)/(3*a+3*b+3*c), (a*yA+b*yB+c*yC)/(3*a+3*b+3*c))</label><br>
+        <input type="radio" id="opcion6_2" name="pregunta6" value="opcion6_2" onclick="checkAnswer('opcion6_2', 'pregunta6', 'respuesta6')">
+        <label for="opcion6_2">((a*xA+b*xB+c*xC)/(2*a+2*b+2*c), (a*yA+b*yB+c*yC)/(2*a+2*b+2*c))</label><br>
+        <input type="radio" id="opcion6_3" name="pregunta6" value="opcion6_3" onclick="checkAnswer('opcion6_3', 'pregunta6', 'respuesta6')">
+        <label for="opcion6_3">((a*xA+b*xB+c*xC)/(a+b+c), (a*yA+b*yB+c*yC)/(a+b+c)) </label><br>
+        <input type="radio" id="opcion6_4" name="pregunta6" value="opcion6_4" onclick="checkAnswer('opcion6_4', 'pregunta6', 'respuesta6')">
+        <label for="opcion6_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta6"></div>
+      <div>
+        <label for="pregunta7">7) Los valores de los tres vértices de los círculos exinscritos a un triángulo cualquiera formados por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:</label><br>
+        <input type="radio" id="opcion7_1" name="pregunta7" value="opcion7_1" onclick="checkAnswer('opcion7_1', 'pregunta7', 'respuesta7')">
+        <label for="opcion7_1">D(c-(Ra/tan(betha)), Ra); E(Rb/tan(alpha), Rb); F(Rc/tan(alpha), Rc)</label><br>
+        <input type="radio" id="opcion7_2" name="pregunta7" value="opcion7_2" onclick="checkAnswer('opcion7_2', 'pregunta7', 'respuesta7')">
+        <label for="opcion7_2">D(c-(Ra/tan(betha)), Ra); E(-Rb/tan(alpha), Rb); F(Rc/tan(alpha), -Rc)</label><br>
+        <input type="radio" id="opcion7_3" name="pregunta7" value="opcion7_3" onclick="checkAnswer('opcion7_3', 'pregunta7', 'respuesta7')">
+        <label for="opcion7_3">D(c+(Ra/tan(betha)), Ra); E(-Rb/tan(alpha), Rb); F(Rc/tan(alpha), -Rc)</label><br>
+        <input type="radio" id="opcion7_4" name="pregunta7" value="opcion7_4" onclick="checkAnswer('opcion7_4', 'pregunta7', 'respuesta7')">
+        <label for="opcion7_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta7"></div>
+      <div>
+        <label for="pregunta8">8) El valor del radio Ra de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:</label><br>
+        <input type="radio" id="opcion8_1" name="pregunta8" value="opcion8_1" onclick="checkAnswer('opcion8_1', 'pregunta8', 'respuesta8')">
+        <label for="opcion8_1">Ra=raíz_cuad((s*(s-b)*(s-c))/(s-a))</label><br>
+        <input type="radio" id="opcion8_2" name="pregunta8" value="opcion8_2" onclick="checkAnswer('opcion8_2', 'pregunta8', 'respuesta8')">
+        <label for="opcion8_2">Ra=raíz_cuad((s*(s-a)*(s-c))/(s-b))</label><br>
+        <input type="radio" id="opcion8_3" name="pregunta8" value="opcion8_3" onclick="checkAnswer('opcion8_3', 'pregunta8', 'respuesta8')">
+        <label for="opcion8_3">Ra=raíz_cuad((s*(s-b)*(s-a))/(s-c))</label><br>
+        <input type="radio" id="opcion8_4" name="pregunta8" value="opcion8_4" onclick="checkAnswer('opcion8_4', 'pregunta8', 'respuesta8')">
+        <label for="opcion8_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta8"></div>
+      <div>
+        <label for="pregunta9">9) El valor del radio Rb de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:</label><br>
+        <input type="radio" id="opcion9_1" name="pregunta9" value="opcion9_1" onclick="checkAnswer('opcion9_1', 'pregunta9', 'respuesta9')">
+        <label for="opcion9_1">Rb=raíz_cuad((s*(s-b)*(s-c))/(s-a))</label><br>
+        <input type="radio" id="opcion9_2" name="pregunta9" value="opcion9_2" onclick="checkAnswer('opcion9_2', 'pregunta9', 'respuesta9')">
+        <label for="opcion9_2">Rb=raíz_cuad((s*(s-a)*(s-c))/(s-b)) </label><br>
+        <input type="radio" id="opcion9_3" name="pregunta9" value="opcion9_3" onclick="checkAnswer('opcion9_3', 'pregunta9', 'respuesta9')">
+        <label for="opcion9_3">Rb=raíz_cuad((s*(s-b)*(s-a))/(s-c))</label><br>
+        <input type="radio" id="opcion9_4" name="pregunta9" value="opcion9_4" onclick="checkAnswer('opcion9_4', 'pregunta9', 'respuesta9')">
+        <label for="opcion9_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta9"></div>
+      <div>
+        <label for="pregunta10">10) El valor del radio Rc de uno de los círculos exinscritos a un triángulo cualquiera formado por las bisectrices, donde uno de sus lados está sobre el eje horizontal, están dados por las fórmulas:</label><br>
+        <input type="radio" id="opcion10_1" name="pregunta10" value="opcion10_1" onclick="checkAnswer('opcion10_1', 'pregunta10', 'respuesta10')">
+        <label for="opcion10_1">Rc=raíz_cuad((s*(s-b)*(s-c))/(s-a))</label><br>
+        <input type="radio" id="opcion10_2" name="pregunta10" value="opcion10_2" onclick="checkAnswer('opcion10_2', 'pregunta10', 'respuesta10')">
+        <label for="opcion10_2">Rc=raíz_cuad((s*(s-a)*(s-c))/(s-b))</label><br>
+        <input type="radio" id="opcion10_3" name="pregunta10" value="opcion10_3" onclick="checkAnswer('opcion10_3', 'pregunta10', 'respuesta10')">
+        <label for="opcion10_3">Rc=raíz_cuad((s*(s-b)*(s-a))/(s-c))</label><br>
+        <input type="radio" id="opcion10_4" name="pregunta10" value="opcion10_4" onclick="checkAnswer('opcion10_4', 'pregunta10', 'respuesta10')">
+        <label for="opcion10_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta10"></div>
+      <div>
+        <label for="pregunta11">11) Verdadero o falso: a) Dado un triángulo cualquiera (excluyendo un triángulo rectángulo), el triángulo órtico o triángulo pedal respecto del dado, es el que tiene por vértices los pies de las tres alturas de este, es decir, las proyecciones de los vértices sobre los lados; b) El ortocentro de un triángulo es el incentro de su triángulo órtico y las alturas de un triángulo son las bisectrices de los ángulos del triángulo pedal.</label><br>
+        <input type="radio" id="opcion11_1" name="pregunta11" value="opcion11_1" onclick="checkAnswer('opcion11_1', 'pregunta11', 'respuesta11')">
+        <label for="opcion11_1">Verdadero, Verdadero </label><br>
+        <input type="radio" id="opcion11_2" name="pregunta11" value="opcion11_2" onclick="checkAnswer('opcion11_2', 'pregunta11', 'respuesta11')">
+        <label for="opcion11_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion11_3" name="pregunta11" value="opcion11_3" onclick="checkAnswer('opcion11_3', 'pregunta11', 'respuesta11')">
+        <label for="opcion11_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion11_4" name="pregunta11" value="opcion11_4" onclick="checkAnswer('opcion11_4', 'pregunta11', 'respuesta11')">
+        <label for="opcion11_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta11"></div>
+      <div>
+        <label for="pregunta12">12) El valor del vértice de la mediana opuesta al vértice A de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion12_1" name="pregunta12" value="opcion12_1" onclick="checkAnswer('opcion12_1', 'pregunta12', 'respuesta12')">
+        <label for="opcion12_1">M(c + b * cos(A), b * sin(A))</label><br>
+        <input type="radio" id="opcion12_2" name="pregunta12" value="opcion12_2" onclick="checkAnswer('opcion12_2', 'pregunta12', 'respuesta12')">
+        <label for="opcion12_2">M((c + b * cos(A)) / 2.0, b * sin(A) / 2.0) </label><br>
+        <input type="radio" id="opcion12_3" name="pregunta12" value="opcion12_3" onclick="checkAnswer('opcion12_3', 'pregunta12', 'respuesta12')">
+        <label for="opcion12_3">M((c + b * cos(A)) / 3.0, b * sin(A) / 3.0)</label><br>
+        <input type="radio" id="opcion12_4" name="pregunta12" value="opcion12_4" onclick="checkAnswer('opcion12_4', 'pregunta12', 'respuesta12')">
+        <label for="opcion12_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta12"></div>
+      <div>
+        <label for="pregunta13">13) El valor del vértice de la mediana opuesta al vértice B de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion13_1" name="pregunta13" value="opcion13_1" onclick="checkAnswer('opcion13_1', 'pregunta13', 'respuesta13')">
+        <label for="opcion13_1">M((b * cos(A)) / 3.0), (b * sin(A)) / 3.0)</label><br>
+        <input type="radio" id="opcion13_2" name="pregunta13" value="opcion13_2" onclick="checkAnswer('opcion13_2', 'pregunta13', 'respuesta13')">
+        <label for="opcion13_2">M(b * cos(A), b * sin(A))</label><br>
+        <input type="radio" id="opcion13_3" name="pregunta13" value="opcion13_3" onclick="checkAnswer('opcion13_3', 'pregunta13', 'respuesta13')">
+        <label for="opcion13_3">M((b * cos(A)) / 2.0), (b * sin(A)) / 2.0)</label><br>
+        <input type="radio" id="opcion13_4" name="pregunta13" value="opcion13_4" onclick="checkAnswer('opcion13_4', 'pregunta13', 'respuesta13')">
+        <label for="opcion13_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta13"></div>
+      <div>
+        <label for="pregunta14">14) El valor del vértice de la mediana opuesta al vértice C de un triángulo cualquiera, donde uno de sus lados está sobre el eje horizontal, está dado por la fórmula:</label><br>
+        <input type="radio" id="opcion14_1" name="pregunta14" value="opcion14_1" onclick="checkAnswer('opcion14_1', 'pregunta14', 'respuesta14')">
+        <label for="opcion14_1">M(c / 2.0, 0.0) </label><br>
+        <input type="radio" id="opcion14_2" name="pregunta14" value="opcion14_2" onclick="checkAnswer('opcion14_2', 'pregunta14', 'respuesta14')">
+        <label for="opcion14_2">M(c / 2.0 + b / 2.0, 0.0)</label><br>
+        <input type="radio" id="opcion14_3" name="pregunta14" value="opcion14_3" onclick="checkAnswer('opcion14_3', 'pregunta14', 'respuesta14')">
+        <label for="opcion14_3">M(b / 2.0, 0.0)</label><br>
+        <input type="radio" id="opcion14_4" name="pregunta14" value="opcion14_4" onclick="checkAnswer('opcion14_4', 'pregunta14', 'respuesta14')">
+        <label for="opcion14_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta14"></div>
+
+      <div>
+        <label for="pregunta15">15) En la función VectorToPointF(), de la clase Vector2D se convierte coordenadas del mundo real al mundo de la Computación Gráfica utilizando las siguientes fórmulas, considerando un área de trabajo de 800x600:</label><br>
+        <input type="radio" id="opcion15_1" name="pregunta15" value="opcion15_1" onclick="checkAnswer('opcion15_1', 'pregunta15', 'respuesta15')">
+        <label for="opcion15_1">xp = x*SF-400; yp = (-1)*(-y)*SF + 300</label><br>
+        <input type="radio" id="opcion15_2" name="pregunta15" value="opcion15_2" onclick="checkAnswer('opcion15_2', 'pregunta15', 'respuesta15')">
+        <label for="opcion15_2">xp = x*SF+400; yp = (-1)*y*SF + 300 </label><br>
+        <input type="radio" id="opcion15_3" name="pregunta15" value="opcion15_3" onclick="checkAnswer('opcion15_3', 'pregunta15', 'respuesta15')">
+        <label for="opcion15_3">xp = x*SF-200; yp = (-1)*(-y)*SF + 150</label><br>
+        <input type="radio" id="opcion15_4" name="pregunta15" value="opcion15_4" onclick="checkAnswer('opcion15_4', 'pregunta15', 'respuesta15')">
+        <label for="opcion15_4">xp = x*SF+200; yp = (-1)*y*SF + 150</label><br>
+      </div>
+      <div id="respuesta15"></div>
+
+      <div>
+        <label for="pregunta16">16) En la función VectorToPointF(), de la clase Vector2D se convierte coordenadas del mundo real al mundo de la Computación Gráfica utilizando las siguientes fórmulas, considerando un área de trabajo de (xCenter*2)x(yCenter*2) y utilizando coordenadas relativas:</label><br>
+        <input type="radio" id="opcion16_1" name="pregunta16" value="opcion16_1" onclick="checkAnswer('opcion16_1', 'pregunta16', 'respuesta16')">
+        <label for="opcion16_1">xp = x*SF+xCenter; yp = (-1)*y*SF+yCenter </label><br>
+        <input type="radio" id="opcion16_2" name="pregunta16" value="opcion16_2" onclick="checkAnswer('opcion16_2', 'pregunta16', 'respuesta16')">
+        <label for="opcion16_2">xp = x*SF+2*xCenter; yp = (-1)*(y)*SF+2*yCenter</label><br>
+        <input type="radio" id="opcion16_3" name="pregunta16" value="opcion16_3" onclick="checkAnswer('opcion16_3', 'pregunta16', 'respuesta16')">
+        <label for="opcion16_3">xp = x*SF+xCenter/2; yp = (-1)*(y)*SF+yCenter/2</label><br>
+        <input type="radio" id="opcion16_4" name="pregunta16" value="opcion16_4" onclick="checkAnswer('opcion16_4', 'pregunta16', 'respuesta16')">
+        <label for="opcion16_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta16"></div>
+      
+      <div>
+        <label for="pregunta17">17) En la función PlotAxis(), de la clase Vector3D, para graficar los ejes coordenados 'x' y 'z', se deben calcular los valores de los segmentos 'a' y 'b' cuyas fórmulas son:</label><br>
+        <input type="radio" id="opcion17_1" name="pregunta17" value="opcion17_1" onclick="checkAnswer('opcion17_1', 'pregunta17', 'respuesta17')">
+        <label for="opcion17_1">a = b / tan(30); b = 8.0 </label><br>
+        <input type="radio" id="opcion17_2" name="pregunta17" value="opcion17_2" onclick="checkAnswer('opcion17_2', 'pregunta17', 'respuesta17')">
+        <label for="opcion17_2">a = 8.0; b = b / tan(30)</label><br>
+        <input type="radio" id="opcion17_3" name="pregunta17" value="opcion17_3" onclick="checkAnswer('opcion17_3', 'pregunta17', 'respuesta17')">
+        <label for="opcion17_3">a = b / tan(60); b = 4.0</label><br>
+        <input type="radio" id="opcion17_4" name="pregunta17" value="opcion17_4" onclick="checkAnswer('opcion17_4', 'pregunta17', 'respuesta17')">
+        <label for="opcion17_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta17"></div>
+      
+      <div>
+        <label for="pregunta18">18) En la función PlotPlane(), de la clase Vector3D, para graficar el plano ABCD, se deben calcular los valores de los segmentos 'a' y 'b' cuyas fórmulas son:</label><br>
+        <input type="radio" id="opcion18_1" name="pregunta18" value="opcion18_1" onclick="checkAnswer('opcion18_1', 'pregunta18', 'respuesta18')">
+        <label for="opcion18_1">a = b / tan(60); b = 8.0</label><br>
+        <input type="radio" id="opcion18_2" name="pregunta18" value="opcion18_2" onclick="checkAnswer('opcion18_2', 'pregunta18', 'respuesta18')">
+        <label for="opcion18_2">a = 4.0; b = b / tan(30)</label><br>
+        <input type="radio" id="opcion18_3" name="pregunta18" value="opcion18_3" onclick="checkAnswer('opcion18_3', 'pregunta18', 'respuesta18')">
+        <label for="opcion18_3">a = b / tan(30); b = 4.0 </label><br>
+        <input type="radio" id="opcion18_4" name="pregunta18" value="opcion18_4" onclick="checkAnswer('opcion18_4', 'pregunta18', 'respuesta18')">
+        <label for="opcion18_4">Ninguna de las anteriores.</label><br>
+      </div>
+      <div id="respuesta18"></div>
+      
+      <div>
+        <label for="pregunta19">19) En la función PlotPlane(), de la clase Vector3D, para graficar el plano ABCD, los cuatro vértices en coordenadas relativas tienen los siguientes valores, en función de los segmentos 'a' y 'b':</label><br>
+        <input type="radio" id="opcion19_1" name="pregunta19" value="opcion19_1" onclick="checkAnswer('opcion19_1', 'pregunta19', 'respuesta19')">
+        <label for="opcion19_1">P1(-200, ((-1) * b * SF) + 150; P2(a * SF + 200, 150); P3(200, ((-1) * -b * SF) + 150); P4(a * SF + 200; 150)</label><br>
+        <input type="radio" id="opcion19_2" name="pregunta19" value="opcion19_2" onclick="checkAnswer('opcion19_2', 'pregunta19', 'respuesta19')">
+        <label for="opcion19_2">P1(200, ((-1) * b * SF) + 150; P2(a * SF + 200, 150); P3(200, ((-1) * -b * SF) + 150); P4(-a * SF + 200; 150)</label><br>
+        <input type="radio" id="opcion19_3" name="pregunta19" value="opcion19_3" onclick="checkAnswer('opcion19_3', 'pregunta19', 'respuesta19')">
+        <label for="opcion19_3">P1(-xCenter, ((-1) * b * SF) + yCenter; P2(a * SF + xCenter, yCenter); P3(xCenter, ((-1) * -b * SF) + yCenter); P4(a * SF + xCenter; yCenter)</label><br>
+        <input type="radio" id="opcion19_4" name="pregunta19" value="opcion19_4" onclick="checkAnswer('opcion19_4', 'pregunta19', 'respuesta19')">
+        <label for="opcion19_4">P1(xCenter, ((-1) * b * SF) + yCenter; P2(a * SF + xCenter, yCenter); P3(xCenter, ((-1) * -b * SF) + yCenter); P4(-a * SF + xCenter; yCenter)</label><br>
+      </div>
+      <div id="respuesta19"></div>
+      
+      <div>
+        <label for="pregunta20">20) En la función PlotPlane(), de la clase Vector3D, para graficar los rombos pequeños, se deben calcular los valores de los segmentos 'p' y 'q' cuyas fórmulas son:</label><br>
+        <input type="radio" id="opcion20_1" name="pregunta20" value="opcion20_1" onclick="checkAnswer('opcion20_1', 'pregunta20', 'respuesta20')">
+        <label for="opcion20_1">p = q / tan(60); q = 0.25</label><br>
+        <input type="radio" id="opcion20_2" name="pregunta20" value="opcion20_2" onclick="checkAnswer('opcion20_2', 'pregunta20', 'respuesta20')">
+        <label for="opcion20_2">p = 0.25; q = p / tan(60)</label><br>
+        <input type="radio" id="opcion20_3" name="pregunta20" value="opcion20_3" onclick="checkAnswer('opcion20_3', 'pregunta20', 'respuesta20')">
+        <label for="opcion20_3">p = q / tan(30); q = 0.25</label><br>
+        <input type="radio" id="opcion20_4" name="pregunta20" value="opcion20_4" onclick="checkAnswer('opcion20_4', 'pregunta20', 'respuesta20')">
+        <label for="opcion20_4">p = 0.25; q = p / tan(30)</label><br>
+      </div>
+      <div id="respuesta20"></div>
+
+      <div>
+        <label for="pregunta21">21) Verdadero o falso: a) En la función PlotPlane(), de la clase Vector3D, para graficar las líneas auxiliares paralelas al eje 'z' del plano ABCD se deben unir los puntos del triángulo rectángulo superior derecho con los puntos opuestos del triángulo rectángulo inferior izquierdo que forman parte del plano; b) En la función PlotPlane(), de la clase Vector3D, para graficar las líneas auxiliares paralelas al eje 'x' del plano ABCD se deben unir los puntos del triángulo rectángulo superior izquierdo con los puntos del triángulo rectángulo inferior derecho que forman parte del plano.</label><br>
+        <input type="radio" id="opcion21_1" name="pregunta21" value="opcion21_1" onclick="checkAnswer('opcion21_1', 'pregunta21', 'respuesta21')">
+        <label for="opcion21_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion21_2" name="pregunta21" value="opcion21_2" onclick="checkAnswer('opcion21_2', 'pregunta21', 'respuesta21')">
+        <label for="opcion21_2">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion21_3" name="pregunta21" value="opcion21_3" onclick="checkAnswer('opcion21_3', 'pregunta21', 'respuesta21')">
+        <label for="opcion21_3">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion21_4" name="pregunta21" value="opcion21_4" onclick="checkAnswer('opcion21_4', 'pregunta21', 'respuesta21')">
+        <label for="opcion21_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta21"></div>
+      
+      <div>
+        <label for="pregunta22">22) En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular algunos vértices como el valor del vértice A y del vértice B cuyas coordenadas son:</label><br>
+        <input type="radio" id="opcion22_1" name="pregunta22" value="opcion22_1" onclick="checkAnswer('opcion22_1', 'pregunta22', 'respuesta22')">
+        <label for="opcion22_1">A(a*cos(60), b+a*sin(60)); B(a*cos(60), a*sin(60))</label><br>
+        <input type="radio" id="opcion22_2" name="pregunta22" value="opcion22_2" onclick="checkAnswer('opcion22_2', 'pregunta22', 'respuesta22')">
+        <label for="opcion22_2">A(a*cos(60), b-a*sin(60)); B(a*cos(60), -a*sin(60))</label><br>
+        <input type="radio" id="opcion22_3" name="pregunta22" value="opcion22_3" onclick="checkAnswer('opcion22_3', 'pregunta22', 'respuesta22')">
+        <label for="opcion22_3">A(a*cos(30), b+a*sin(30)); B(a*cos(30), a*sin(30))</label><br>
+        <input type="radio" id="opcion22_4" name="pregunta22" value="opcion22_4" onclick="checkAnswer('opcion22_4', 'pregunta22', 'respuesta22')">
+        <label for="opcion22_4">A(a*cos(30), b-a*sin(30)); B(a*cos(30), -a*sin(30)) </label><br>
+      </div>
+      <div id="respuesta22"></div>
+      
+      <div>
+        <label for="pregunta23">23) Verdadero o falso: a) En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular seis vértices y los valores de los segmentos: BM, OM, DP, AP, PM, NM, ON; b) En la función PlotBox(), de la clase Vector3D, para graficar el vector se debe calcular el valor de los vértices O y D, y luego dibujar una línea entre esos dos puntos.</label><br>
+        <input type="radio" id="opcion23_1" name="pregunta23" value="opcion23_1" onclick="checkAnswer('opcion23_1', 'pregunta23', 'respuesta23')">
+        <label for="opcion23_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion23_2" name="pregunta23" value="opcion23_2" onclick="checkAnswer('opcion23_2', 'pregunta23', 'respuesta23')">
+        <label for="opcion23_2">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion23_3" name="pregunta23" value="opcion23_3" onclick="checkAnswer('opcion23_3', 'pregunta23', 'respuesta23')">
+        <label for="opcion23_3">Verdadero, Falso </label><br>
+        <input type="radio" id="opcion23_4" name="pregunta23" value="opcion23_4" onclick="checkAnswer('opcion23_4', 'pregunta23', 'respuesta23')">
+        <label for="opcion23_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta23"></div>
+      
+      <div>
+        <label for="pregunta24">24) En la función PlotBox(), de la clase Vector3D, para graficar la caja, se deben calcular algunos vértices como el valor del vértice C y del vértice D cuyas coordenadas son:</label><br>
+        <input type="radio" id="opcion24_1" name="pregunta24" value="opcion24_1" onclick="checkAnswer('opcion24_1', 'pregunta24', 'respuesta24')">
+        <label for="opcion24_1">C(ON, PM+b); D(ON, PM)</label><br>
+        <input type="radio" id="opcion24_2" name="pregunta24" value="opcion24_2" onclick="checkAnswer('opcion24_2', 'pregunta24', 'respuesta24')">
+        <label for="opcion24_2">C(ON, PM-b); D(ON, -PM)</label><br>
+        <input type="radio" id="opcion24_3" name="pregunta24" value="opcion24_3" onclick="checkAnswer('opcion24_3', 'pregunta24', 'respuesta24')">
+        <label for="opcion24_3">C(ON, PM+b); D(ON, -PM)</label><br>
+        <input type="radio" id="opcion24_4" name="pregunta24" value="opcion24_4" onclick="checkAnswer('opcion24_4', 'pregunta24', 'respuesta24')">
+        <label for="opcion24_4">C(ON, PM-b); D(ON, PM)</label><br>
+      </div>
+      <div id="respuesta24"></div>
+      
+      <div>
+        <label for="pregunta25">25) Verdadero o falso: a) En la función PlotParallelogram(), de la clase Vector3D, para graficar el vector paralelo al vector A se requiere dibujar una línea operando con los vectores A y C, mientras que para graficar el vector paralelo al vector B se requiere dibujar una línea operando con los vectores B y C; b) En la función PlotParallelogram(), de la clase Vector3D, para graficar el paralelogramo resultante de la suma y de la resta se requiere que esta función opere con los tres vectores A, B y C.</label><br>
+        <input type="radio" id="opcion25_1" name="pregunta25" value="opcion25_1" onclick="checkAnswer('opcion25_1', 'pregunta25', 'respuesta25')">
+        <label for="opcion25_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion25_2" name="pregunta25" value="opcion25_2" onclick="checkAnswer('opcion25_2', 'pregunta25', 'respuesta25')">
+        <label for="opcion25_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion25_3" name="pregunta25" value="opcion25_3" onclick="checkAnswer('opcion25_3', 'pregunta25', 'respuesta25')">
+        <label for="opcion25_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion25_4" name="pregunta25" value="opcion25_4" onclick="checkAnswer('opcion25_4', 'pregunta25', 'respuesta25')">
+        <label for="opcion25_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta25"></div>
+
+      <div>
+        <label for="pregunta26">26) Verdadero o falso: a) Para calcular el vector proyección V de A/B se requiere calcular el producto punto entre el vector A y el vector unitario de B cuyo resultado al ser un escalar se deberá multiplicar por el vector unitario de B; b) Para calcular el vector perpendicular P se requiere realizar una resta entre los vectores A y el vector proyección V de A/B.</label><br>
+        <input type="radio" id="opcion26_1" name="pregunta26" value="opcion26_1" onclick="checkAnswer('opcion26_1', 'pregunta26', 'respuesta26')">
+        <label for="opcion26_1">Verdadero, Verdadero </label><br>
+        <input type="radio" id="opcion26_2" name="pregunta26" value="opcion26_2" onclick="checkAnswer('opcion26_2', 'pregunta26', 'respuesta26')">
+        <label for="opcion26_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion26_3" name="pregunta26" value="opcion26_3" onclick="checkAnswer('opcion26_3', 'pregunta26', 'respuesta26')">
+        <label for="opcion26_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion26_4" name="pregunta26" value="opcion26_4" onclick="checkAnswer('opcion26_4', 'pregunta26', 'respuesta26')">
+        <label for="opcion26_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta26"></div>
+      
+      <div>
+        <label for="pregunta27">27) Verdadero o falso: a) En la función EvaluateFunction(), de la clase CCuadraticFunction, para graficar una parábola dentro del dominio [-20, 20], con un tamaño de paso h=1, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 21; b) En la función EvaluateFunction(), de la clase CSinFunction, para graficar la función seno(x) dentro del dominio [-3PI, 3PI], con un tamaño de paso h=15 grados, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 73.</label><br>
+        <input type="radio" id="opcion27_1" name="pregunta27" value="opcion27_1" onclick="checkAnswer('opcion27_1', 'pregunta27', 'respuesta27')">
+        <label for="opcion27_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion27_2" name="pregunta27" value="opcion27_2" onclick="checkAnswer('opcion27_2', 'pregunta27', 'respuesta27')">
+        <label for="opcion27_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion27_3" name="pregunta27" value="opcion27_3" onclick="checkAnswer('opcion27_3', 'pregunta27', 'respuesta27')">
+        <label for="opcion27_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion27_4" name="pregunta27" value="opcion27_4" onclick="checkAnswer('opcion27_4', 'pregunta27', 'respuesta27')">
+        <label for="opcion27_4">Falso, Falso </label><br>
+      </div>
+      <div id="respuesta27"></div>
+      
+      <div>
+        <label for="pregunta28">28) Verdadero o falso: a) En la función EvaluateFunction(), de la clase CRoseFourPetals, para graficar la función polar dentro del dominio [0, 2PI], con un tamaño de paso h=1 grado, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 361; b) En la función EvaluateFunction(), de la clase CParametricFunction, para graficar una función paramétrica dentro del dominio [0, 2PI], con un tamaño de paso h=1 grado, se requiere tener un arreglo de puntos de tipo Point cuyo tamaño es 361.</label><br>
+        <input type="radio" id="opcion28_1" name="pregunta28" value="opcion28_1" onclick="checkAnswer('opcion28_1', 'pregunta28', 'respuesta28')">
+        <label for="opcion28_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion28_2" name="pregunta28" value="opcion28_2" onclick="checkAnswer('opcion28_2', 'pregunta28', 'respuesta28')">
+        <label for="opcion28_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion28_3" name="pregunta28" value="opcion28_3" onclick="checkAnswer('opcion28_3', 'pregunta28', 'respuesta28')">
+        <label for="opcion28_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion28_4" name="pregunta28" value="opcion28_4" onclick="checkAnswer('opcion28_4', 'pregunta28', 'respuesta28')">
+        <label for="opcion28_4">Falso, Falso </label><br>
+      </div>
+      <div id="respuesta28"></div>
+      
+      <div>
+        <label for="pregunta29">29) Verdadero o falso: a) En la función EvaluateFunction(), de la clase CRationalFunction, para graficar la función racional y =(x*x-1)/(x*x-4) se requieren definir 3 dominios manejados cada uno con un bucle por la presencia de tres asíntotas; b) En la función PlotAsimptotes(), de la clase CRationalFunction, se tiene que las asíntotas x=2 como x=-2 son paralelas al eje vertical, mientras que la asíntota y=1 es paralela al eje horizontal.</label><br>
+        <input type="radio" id="opcion29_1" name="pregunta29" value="opcion29_1" onclick="checkAnswer('opcion29_1', 'pregunta29', 'respuesta29')">
+        <label for="opcion29_1">Verdadero, Verdadero </label><br>
+        <input type="radio" id="opcion29_2" name="pregunta29" value="opcion29_2" onclick="checkAnswer('opcion29_2', 'pregunta29', 'respuesta29')">
+        <label for="opcion29_2">Verdadero, Falso</label><br>
+        <input type="radio" id="opcion29_3" name="pregunta29" value="opcion29_3" onclick="checkAnswer('opcion29_3', 'pregunta29', 'respuesta29')">
+        <label for="opcion29_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion29_4" name="pregunta29" value="opcion29_4" onclick="checkAnswer('opcion29_4', 'pregunta29', 'respuesta29')">
+        <label for="opcion29_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta29"></div>
+      
+      <div>
+        <label for="pregunta30">30) Verdadero o falso: a) En la función PlotAsimptotes(), de la clase CRationalFunction, para graficar las asíntotas se debe operar los vectores A y C; b) En la función EvaluateFunction(), de la clase CLogarithmFunction, para graficar la función logarítmica y = log(x) se requiere calcular el logaritmo natural del valor de x con respecto a la base 10.</label><br>
+        <input type="radio" id="opcion30_1" name="pregunta30" value="opcion30_1" onclick="checkAnswer('opcion30_1', 'pregunta30', 'respuesta30')">
+        <label for="opcion30_1">Verdadero, Verdadero</label><br>
+        <input type="radio" id="opcion30_2" name="pregunta30" value="opcion30_2" onclick="checkAnswer('opcion30_2', 'pregunta30', 'respuesta30')">
+        <label for="opcion30_2">Verdadero, Falso </label><br>
+        <input type="radio" id="opcion30_3" name="pregunta30" value="opcion30_3" onclick="checkAnswer('opcion30_3', 'pregunta30', 'respuesta30')">
+        <label for="opcion30_3">Falso, Verdadero</label><br>
+        <input type="radio" id="opcion30_4" name="pregunta30" value="opcion30_4" onclick="checkAnswer('opcion30_4', 'pregunta30', 'respuesta30')">
+        <label for="opcion30_4">Falso, Falso</label><br>
+      </div>
+      <div id="respuesta30"></div>
+    
+  </fieldset>
+</form>
+
+<script>
+function checkAnswer(selectedOption, questionId, divId) {
+  var respuestaCorrecta;
+  var mensaje;
+  
+  switch (questionId) {
+    case 'pregunta1':
+      respuestaCorrecta = 'opcion1_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta2':
+      respuestaCorrecta = 'opcion2_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta3':
+      respuestaCorrecta = 'opcion3_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta4':
+      respuestaCorrecta = 'opcion4_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta5':
+      respuestaCorrecta = 'opcion5_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta6':
+      respuestaCorrecta = 'opcion6_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta7':
+      respuestaCorrecta = 'opcion7_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta8':
+      respuestaCorrecta = 'opcion8_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta9':
+      respuestaCorrecta = 'opcion9_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta10':
+      respuestaCorrecta = 'opcion10_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta11':
+      respuestaCorrecta = 'opcion11_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta12':
+      respuestaCorrecta = 'opcion12_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta13':
+      respuestaCorrecta = 'opcion13_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta14':
+      respuestaCorrecta = 'opcion14_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta15':
+      respuestaCorrecta = 'opcion15_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    case 'pregunta16':
+      respuestaCorrecta = 'opcion16_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta17':
+      respuestaCorrecta = 'opcion17_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta18':
+      respuestaCorrecta = 'opcion18_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta19':
+      respuestaCorrecta = 'opcion19_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta20':
+      respuestaCorrecta = 'opcion20_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta21':
+      respuestaCorrecta = 'opcion21_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta22':
+      respuestaCorrecta = 'opcion22_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta23':
+      respuestaCorrecta = 'opcion23_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta24':
+      respuestaCorrecta = 'opcion24_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta25':
+      respuestaCorrecta = 'opcion25_3';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta26':
+      respuestaCorrecta = 'opcion26_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta27':
+      respuestaCorrecta = 'opcion27_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta28':
+      respuestaCorrecta = 'opcion28_4';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta29':
+      respuestaCorrecta = 'opcion29_1';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+      case 'pregunta30':
+      respuestaCorrecta = 'opcion30_2';
+      mensaje = (selectedOption === respuestaCorrecta) ? '¡Correcto!' : 'Incorrecto';
+      break;
+    default:
+      respuestaCorrecta = '';
+      mensaje = 'Respuesta no definida';
+  }
+
+  var divRespuesta = document.getElementById(divId);
+  divRespuesta.innerHTML = mensaje;
+  divRespuesta.className = (mensaje === '¡Correcto!') ? 'correcto' : 'incorrecto';
+}
+</script>
+
+</body>
+</html>
